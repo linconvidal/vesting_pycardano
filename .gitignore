@@ -7,6 +7,7 @@ docs/
 
 # python and virtual environment
 venv/
+.venv/
 *.pyc
 *.pyo
 *.pyd
