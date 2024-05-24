@@ -1,0 +1,15 @@
+# Aiken compilation artifacts
+artifacts/
+# Aiken's project working directory
+build/
+# Aiken's default documentation export
+docs/
+
+# python and virtual environment
+venv/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+

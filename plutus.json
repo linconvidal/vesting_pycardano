@@ -1,0 +1,74 @@
+{
+  "preamble": {
+    "title": "lincon/vesting_pycardano",
+    "description": "Aiken contracts for project 'lincon/vesting_pycardano'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "vesting.vesting",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/vesting~1Datum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "compiledCode": "59014b0100003232323232323232222325333007323232533300a3370e90010008991919299980699800980118058041bae3006300b00a14a22a66601a66002600460160106eb8c044c048c048c02c0284cc88c8c94ccc044cdc3a4004002266e2400cdd6980a98078010a50300f0013004300d3004300d00230113012301230123012301230123012300b3002300b008375a60046016014294088cc88c8cc00400400c894ccc05400452809919299980a19b8f00200514a226600800800260300046eb8c058004dd618091809980998099809980998099809980998060010009180800098040010a503008001300130060032300c300d001149858c94ccc01ccdc3a40000022646464646464a66602060240042930b1bae30100013010002375c601c002601c0046eb4c030004c01401058c01400c8c014dd5000918019baa0015734aae7555cf2ab9f5742ae89",
+      "hash": "ecadf02bc13b16ebce0f4967e71be82a7a132a161f23cee62e4d7b20"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "Void": {
+      "title": "Unit",
+      "description": "The nullary constructor.",
+      "anyOf": [
+        {
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    },
+    "vesting/Datum": {
+      "title": "Datum",
+      "anyOf": [
+        {
+          "title": "Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "lock_until",
+              "description": "POSIX time in seconds, e.g. 1672843961000",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "owner",
+              "description": "Owner's credential",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "beneficiary",
+              "description": "Beneficiary's credential",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

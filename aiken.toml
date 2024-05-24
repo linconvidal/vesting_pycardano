@@ -1,0 +1,14 @@
+name = "lincon/vesting_pycardano"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'lincon/vesting_pycardano'"
+
+[repository]
+user = "lincon"
+project = "vesting_pycardano"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.6.0"
+source = "github"
